@@ -24,7 +24,7 @@ app.engine("handlebars",handlebars({defaultLayout:'main'}));
 app.set('view engine','handlebars');
 
 
-app.get("/",function(req,res){res.render('oi');});
+app.get("/",function(req,res){res.send('oi');});
 
 //start server
 let port=process.env.PORT || 3000;
