@@ -14,7 +14,7 @@ const sql=mysql.createPool({
     password: '5c7432b7',
     database: 'heroku_906ae94e9705448'
 });
-let port=process.env.PORT || 3000;
+
 app.use('/img',express.static('img'));
 app.use('/css',express.static('css'));
 app.use('/js',express.static('js'));
@@ -28,5 +28,6 @@ app.set('view engine','handlebars');
 app.get("/",function(req,res){res.render('oi');});
 
 //start server
-app.listen(port,function(req,res){console.log('Servidor está online');}); 
+let port=process.env.PORT || 3000;
+app.listen(port,function(req,res){console.log('Servidor está rodando!');});
 
