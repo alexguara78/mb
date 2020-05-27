@@ -8,10 +8,9 @@ const cors=require('cors');
 const app=express();
 const urlencodedParser=bodyParser.urlencoded({extended:false});
 const sql=mysql.createPool({
- 
-    host: 'us-cdbr-east-05.cleardb.net',
     user: 'b3aa9411248041',
     password: '5c7432b7',
+    host: 'us-cdbr-east-05.cleardb.net',
     database: 'heroku_906ae94e9705448'
 });
 
